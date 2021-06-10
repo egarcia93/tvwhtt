@@ -1,0 +1,676 @@
+:: StoryData
+{
+    "ifid": "F2277A49-95C9-4B14-AE66-62526089F861",
+    "format": "SugarCube",
+
+    "format-version": "2.35.0",
+    "start": "Start"
+}
+
+:: StoryTitle
+The voice we hear through time
+
+:: StoryInit
+
+<<cacheaudio "song" "data/track.wav" >>
+/* <<script>>
+
+var audio = document.createElement('audio');
+audio.src = 'data/track.wav';
+
+audio.loop = true;
+window.onclick = function(event){
+	audio.play();
+  console.log("hir");
+
+}
+<</script>> */
+
+:: Start [start]
+
+<<audio "song" play>>
+<<script>>
+UIBar.destroy();
+<</script>>
+
+
+[img['data/SpinningMaze.gif'][Departure]]
+<span class=anima_odd>''The''</span> <span class=anima_even>''voice''</span> <span class=anima_odd>''we''</span><span class=anima_even> ''hear''</span> <span class=anima_odd>''through''</span><span class=anima_even> ''time''</span>&nbsp;
+
+:: Departure [departure]
+<<script>>
+UIBar.destroy();
+<</script>>
+
+A seamless  room, filled with hexagon tiles. 
+You feel like floating and still.
+Nobody around you, no one can hear you.
+
+YOU start to dissolve
+
+<span class=appear_1>YOU</span>
+
+<span class=appear_2>YO</span>
+
+<span class=appear_3>[[Y|Alone]]</span>
+
+:: Alone
+<<script>>
+UIBar.destroy();
+<</script>>
+
+Alone, again...
+That soft feeling surrounding you
+Here ''[[NOBODY|AloneRoom]]'' can hurt you
+Out of the reach of any danger from the outside
+Just you...
+
+You and the darkness...
+
+<div class=reveal>
+Is it just you?
+
+Do you want to [[go out|Waiting]] or you are willing to get [[going|RabbitHole]]
+
+</div>
+
+:: AloneRoom
+<<script>>
+UIBar.destroy();
+<</script>>
+<div class=candle>
+[img['data/Candle.gif'][Alone]]
+</div>
+
+:: Waiting
+<<script>>
+UIBar.destroy();
+<</script>>
+You are stil trapped [[here|AloneRoom]] the best will be to face the danger and [[keep going|Peephole]]
+
+:: RabbitHole [hole]
+<<script>>
+UIBar.destroy();
+<</script>>
+
+
+<script>
+  // Accepts any class name
+  var rellax = new Rellax('.rellax');
+</script>
+
+
+<article class="content">
+      <div class="one rellax" data-rellax-speed="5">You</div>
+      <div class="two">are</div>
+      <div class="three rellax" data-rellax-speed="-5">falling</div>
+    </article>
+
+<footer class=door>
+  <p >What is behind the [[door|Tunnel]]</p>
+</footer>
+
+:: Tunnel [tunnel]
+<<script>>
+UIBar.destroy();
+<</script>>
+<a data-passage="Forking">
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="100%" heihgt="100%" viewBox="0 150 744 1052" id="svg2"  version="1">
+   
+     <path  id= "MyPath" stroke-dashoffset="6265" stroke-dasharray="6265" d="m351 487c0 8-11 4-14-1-6-11 4-24 15-27 19-5 37 11 40 30 4 27-18 50-44 53-35 4-64-25-66-59-3-42 32-77 73-79 50-3 90 39 92 88 2 57-46 104-102 105-65 2-117-53-119-117-1-72 60-131 131-132 80-1 144 67 145 146 1 87-74 158-160 158-95 0-171-81-171-175 0-102 88-185 190-184 110 1 198 95 197 204C557 615 456 709 340 708 215 706 115 598 117 475 119 342 233 236 364 238 504 240 616 361 614 500 611 648 484 766 337 763 182 760 58 626 61 472 65 309 206 179 367 183c170 4 306 151 302 320-4 178-158 319-335 315" style="fill:none;stroke:#f00" stroke-width="2">
+	 <animate attributeName="stroke-dashoffset" values="6265;0;6265;0" dur="20s" fill="freeze"/> 
+	 </path>
+
+
+
+  <text id="MyText" font-family="Verdana" font-size="50" fill="white" >
+    <textPath xlink:href="#MyPath" >
+    hguorht kool dna rebmemeR      
+    ereh tog uoy ecniS      
+    ...sraey nevE      
+    ....shtnoM      
+    ....syad saw ti ebyaM      
+    kcab kool t'noD      
+    .rehtruf pets a ekat dna seiromem ruoy ot dloH      
+    .eniwt der siht ot no dloH        
+
+    </textPath>
+    </text>
+   </svg>
+</a>
+:: Forking
+<<script>>
+UIBar.destroy();
+<</script>>
+
+[[E|Link]] [[n|Link]] [[t|Link]] [[e|Link]] [[r|Link]] [[i|Link]] [[n|Link]] [[g|Link]] blindfolded to a garden of forked paths ,
+Every wall is different, 
+there is no distiction at all.
+<<set $counter to 0>>
+
+
+:: Link
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<goto `either("Light Green", "White", "Red","Grey","Blue","Black","Saffron","Yellow")`>>
+
+:: Light Green [green]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<set $counter to $counter + 1>>
+<<if $counter is 4>><<goto "Oratory">><</if>>
+
+[[Romance|LinkG]]
+
+:: LinkG [green]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+
+<<goto `either("White", "Red","Grey","Blue","Black","Saffron","Yellow")`>>
+
+:: White [white]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<set $counter to $counter + 1>>
+<<if $counter is 4>><<goto "Oratory">><</if>>
+[[Comedy|LinkW]]
+
+:: LinkW [white]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<goto `either("Light Green", "Red","Grey","Blue","Black","Saffron","Yellow")`>>
+
+
+:: Red [red]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<set $counter to $counter + 1>>
+<<if $counter is 4>><<goto "Oratory">><</if>>
+[[Fury|LinkR]]
+
+:: LinkR [red]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<goto `either("Light Green", "White","Grey","Blue","Black","Saffron","Yellow")`>>
+
+
+:: Grey [grey]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<set $counter to $counter + 1>>
+<<if $counter is 4>><<goto "Oratory">><</if>>
+[[Compassion|LinkGr]]
+
+:: LinkGr [grey]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<goto `either("Light Green", "White", "Red","Blue","Black","Saffron","Yellow")`>>
+
+:: Blue [blue]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<set $counter to $counter + 1>>
+<<if $counter is 4>><<goto "Oratory">><</if>>
+[[Disgust|LinkB]]
+
+:: LinkB [blue]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<goto `either("Light Green", "White", "Red","Grey","Black","Saffron","Yellow")`>>
+
+:: Black [black]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<set $counter to $counter + 1>>
+<<if $counter is 4>><<goto "Oratory">><</if>>
+[[Horror|LinkBl]]
+
+:: LinkBl [black]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<goto `either("Light Green", "White", "Red","Grey","Blue","Saffron","Yellow")`>>
+
+:: Saffron [saffron]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<set $counter to $counter + 1>>
+<<if $counter is 4>><<goto "Oratory">><</if>>
+[[Heroism|LinkS]]
+
+:: LinkS [saffron]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<goto `either("Light Green", "White", "Red","Grey","Blue","Black","Yellow")`>>
+
+:: Yellow [yellow]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<set $counter to $counter + 1>>
+<<if $counter is 4>><<goto "Oratory">><</if>>
+[[Wonder|LinkY]]
+
+:: LinkY [yellow]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+<<goto `either("Light Green", "White", "Red","Grey","Blue","Black","Saffron")`>>
+
+
+
+:: Oratory
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+[[Write here|Alert]]
+
+:: Alert [alert]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+
+There is something behind those walls
+Is it footsteps?
+Maybe voices?
+It was a growl
+<div id="alert"></div>
+<span id="run">[[RUN|Tangled]]</span>
+
+
+
+<<script>>
+
+  let flag = false ;
+  let timerId;
+  let running = false ;
+  timerId = setTimeout(run, 3000);
+  console.log("starting timer");
+  window.addEventListener('mousemove',stop);
+
+
+function stop(){
+  if(!flag&&!running){
+     //clearTimeout(timerId);
+      //timerId = setTimeout(run, 5000);
+      //console.log("starting timer");
+      var para = document.createElement("p");
+      var node = document.createTextNode("Do not move");
+      para.appendChild(node);
+      var element = document.getElementById("alert");
+      element.appendChild(para);
+      flag= true;
+  //dont move appear
+  };
+    
+      console.log("moving")
+     
+      flag = false;
+
+}
+
+function run(){
+    running = true;
+    
+    console.log("RUN");
+   
+    var element = document.getElementById("run");
+      element.style.visibility = "visible";
+      flag= true;
+    
+    //Run appear [[RUN|Tangled]]
+  };
+
+
+ 
+
+<</script>>
+
+:: Tangled[tangled]
+
+<<script>>
+UIBar.destroy();
+<</script>>
+
+&emsp;&emsp;&emsp;&emsp;&emsp;  Se[[e|Alert]]ms &emsp;&emsp;&emsp;&emsp;&emsp; like 
+&emsp;&emsp;&emsp;you&emsp;&emsp;&emsp;&emsp;&emsp;[[a|Door]]re
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[[t|Rest]]angled &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;up
+ 
+
+:: Door [doors]
+<<script>>
+UIBar.destroy();
+<</script>>
+
+ Are you looking for an [[exit->Door1]]?
+
+:: Door1 [door1]
+<<script>>
+UIBar.destroy();
+<</script>>
+
+There is something you must [[know->Door2]]
+
+:: Door2 [door2]
+<<script>>
+UIBar.destroy();
+<</script>>
+
+There is [[no...->Door3]]
+
+:: Door3 [door3]
+<<script>>
+UIBar.destroy();
+<</script>>
+
+[[EXIT->Alert]]
+
+:: Rest
+<<script>>
+UIBar.destroy();
+<</script>>
+
+Stop there
+Take a break
+Maybe the maze is inside?
+The door will not open in some time
+Just breathe
+<span class="appear_4">[[Lets go|String]]</span>
+
+:: String 
+<<script>>
+UIBar.destroy();
+<</script>>
+
+Pull the [[string|The Hall]] 
+
+:: The Hall
+<<script>>
+UIBar.destroy();
+<</script>>
+
+Light at the end of this hall
+Time of going back to reality
+Go out
+
+
+[[Out|Credits]]
+
+:: Credits
+
+By <a href="http://www.egarciaa.com">Enrique García-Alcalá</a>
+
+[[Restart|Start]]
+
+
+
+
+
+:: Styles [stylesheet]
+
+body{
+    background: black;
+    font-family: courier;
+}
+
+@keyframes fade-in-out {
+	0%,
+	to {opacity: 0}
+	50% {opacity: 1}
+}
+
+@keyframes fade-in {
+	from {opacity:0},
+	to {opacity: 1}
+  
+}
+.anima_even {
+  
+  animation-name: fade-in-out;
+  animation: fade-in-out 5s ease-in-out infinite alternate;
+	-webkit-animation: fade-in-out 5s ease-in-out infinite alternate;
+}
+
+.anima_odd {
+  
+  animation-name: fade-in-out;
+  animation: fade-in-out 6s ease-in-out infinite alternate;
+	-webkit-animation: fade-in-out 6s ease-in-out infinite alternate;
+}
+.appear_1{
+  animation-name: fade-in;
+  animation: fade-in linear 10s;
+  font-size: 30px;
+ 
+}
+
+.appear_2{
+  animation-name: fade-in;
+  animation: fade-in linear 12s;  
+   font-size: 40px;
+ 
+}
+
+.appear_3{
+  animation-name: fade-in;
+  animation: fade-in linear 14s; 
+   font-size: 50px; 
+ 
+}
+
+.appear_4{
+  animation-name: fade-in;
+  animation: fade-in linear 20s; 
+   font-size: 25px; 
+ 
+}
+
+img{
+    width: 45%;
+    height: 45%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    }
+
+.start{
+  font-size: 20px;
+  
+}
+
+.reveal{
+  opacity: 0
+}
+
+.reveal:hover{
+  
+  opacity:1;
+  transition:opacity 2s;
+  
+}
+
+.candle{
+  opacity: 75%;
+  filter: brightness(0.6);
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  margin: 20px;
+  max-width: 100%;
+  width: 100vw;
+}
+
+
+div.hole{
+  margin: 20px;
+  font-size: 36px;
+  border-size:20px;
+}
+.one {
+  background-color: #364996 ;
+}
+
+.two {
+  background-color: #253368;
+}
+
+.three {
+  background-color: #1d2554;
+}
+
+.hole{
+  height: 300vh;
+}
+
+.door{
+position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+  top: 300vh;
+}
+
+.tunnel{
+  
+   
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top:100px;
+    align-items: center;
+     display: flex;
+ 
+  justify-content: center;
+}
+
+.green{
+
+  background-color: green;
+}
+
+.white{
+  background-color: white;
+
+}
+
+.red{
+  background-color:red;
+
+}
+
+.grey{
+  background-color:grey;
+}
+
+.blue{
+  background-color: blue;
+}
+
+.black{
+  background-color:black;
+}
+
+.saffron{
+  background-color:#f93;
+
+}
+
+.yellow{
+  background-color:yellow;
+}
+
+#run{
+  visibility: hidden;
+  font-size: 50px;
+}
+
+.tangled{
+  
+  font-size: 35px;
+  margin-left: auto;
+}
+
+.doors{
+
+  font-size: 50px;
+  letter-spacing: 10px;
+
+
+
+}
+
+.door1{
+
+  font-size : 60px;
+  letter-spacing: 5px;
+
+}
+
+.door2{
+
+  font-size : 70px;
+  letter-spacing: 1px;
+
+}
+
+.door3{
+  font-size: 100px;
+  letter-spacing: -25px;
+}
+
