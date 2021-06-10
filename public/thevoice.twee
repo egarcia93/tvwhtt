@@ -13,6 +13,7 @@ The voice we hear through time
 :: StoryInit
 
 <<cacheaudio "song" "data/track.wav" >>
+ <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
 /* <<script>>
 
 var audio = document.createElement('audio');
