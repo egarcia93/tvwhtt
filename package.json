@@ -1,18 +1,28 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
-
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "mongoose": "^5.12.13",
     "rellax": "^1.12.1",
     "socket.io": "^4.1.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egarcia93/tvwhtt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/egarcia93/tvwhtt/issues"
+  },
+  "homepage": "https://github.com/egarcia93/tvwhtt#readme",
+  "description": ""
 }

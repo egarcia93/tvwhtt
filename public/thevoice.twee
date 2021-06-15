@@ -13,7 +13,7 @@ The voice we hear through time
 :: StoryInit
 
 <<cacheaudio "song" "data/track.wav" >>
- <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+ 
 /* <<script>>
 
 var audio = document.createElement('audio');
@@ -87,7 +87,7 @@ UIBar.destroy();
 <<script>>
 UIBar.destroy();
 <</script>>
-You are stil trapped [[here|AloneRoom]] the best will be to face the danger and [[keep going|Peephole]]
+You are stil trapped [[here|AloneRoom]] the best will be to face the danger and [[keep going|RabbitHole]]
 
 :: RabbitHole [hole]
 <<script>>
@@ -126,14 +126,14 @@ UIBar.destroy();
 
   <text id="MyText" font-family="Verdana" font-size="50" fill="white" >
     <textPath xlink:href="#MyPath" >
-    hguorht kool dna rebmemeR      
-    ereh tog uoy ecniS      
-    ...sraey nevE      
-    ....shtnoM      
-    ....syad saw ti ebyaM      
-    kcab kool t'noD      
-    .rehtruf pets a ekat dna seiromem ruoy ot dloH      
-    .eniwt der siht ot no dloH        
+    Hold on to this red twine
+    Hold to your memories and tak a step further
+    Don't look back
+    Maybe it was days..
+    Months....
+    Even years...
+    Since you got here
+    Remember and look through
 
     </textPath>
     </text>
@@ -313,7 +313,39 @@ UIBar.destroy();
 UIBar.destroy();
 <</script>>
 
-[[Write here|Alert]]
+
+
+<input id= "oratory-input" placeholder="Write here">
+
+<<link [[Go on|Alert]] >>
+
+<<script>>
+      
+       let message =  document.getElementById('oratory-input').value;
+      console.log(message);
+       let theMessage ={
+         "message": message
+
+       }
+      let jsonData = JSON.stringify(theMessage);
+
+      fetch('/send',{
+        method: 'POST',
+        headers:{
+          "Content-type": "application/json"
+        },
+        body: jsonData
+      })
+      .then(response=>response.json())
+      .then(response =>{
+        //console.log("response");
+      });
+     
+ 
+
+<</script>>
+
+<</link>>
 
 :: Alert [alert]
 
@@ -325,9 +357,9 @@ UIBar.destroy();
 There is something behind those walls
 Is it footsteps?
 Maybe voices?
-It was a growl
+It was a <span class="shakey">growl</span>
 <div id="alert"></div>
-<span id="run">[[RUN|Tangled]]</span>
+<span id = "run">[[RUN|Tangled]]</span>
 
 
 
@@ -426,29 +458,55 @@ Stop there
 Take a break
 Maybe the maze is inside?
 The door will not open in some time
-Just breathe
+
+<span class="breath">Just breathe</span>
+
 <span class="appear_4">[[Lets go|String]]</span>
 
 :: String 
+
+
 <<script>>
 UIBar.destroy();
+
 <</script>>
 
-Pull the [[string|The Hall]] 
 
+[[Pull the string|The Hall]]
+   
 :: The Hall
+<a data-passage="Credits"><ul id="messages"></ul></a>
+<<script>>
+UIBar.destroy();
+<</script>>
+ <<script>>
+    let messageArray;
+        fetch('/find',{
+          method: 'GET',
+          headers:{
+            "Content-type": "application/json"
+          },
+          
+        })
+        .then(response=>response.json())
+        .then(response =>{
+          //console.log("response");
+          messageArray = response;
+          console.log(messageArray);
+          for(let i = 0 ; i<messageArray.length; i++){
+            var para = document.createElement("li");
+            var node = document.createTextNode(messageArray[i].message);
+            para.appendChild(node);
+            var element = document.getElementById("messages");
+            element.appendChild(para);
+          }
+        });
+<</script>>
+:: Credits
 <<script>>
 UIBar.destroy();
 <</script>>
 
-Light at the end of this hall
-Time of going back to reality
-Go out
-
-
-[[Out|Credits]]
-
-:: Credits
 
 By <a href="http://www.egarciaa.com">Enrique García-Alcalá</a>
 
@@ -639,6 +697,7 @@ position: absolute;
 #run{
   visibility: hidden;
   font-size: 50px;
+
 }
 
 .tangled{
@@ -673,5 +732,210 @@ position: absolute;
 .door3{
   font-size: 100px;
   letter-spacing: -25px;
+}
+
+#svg2 {
+    width: 100%;
+    height: 45%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    
+    -webkit-animation: rotation 80s infinite linear;
+    -moz-animation: rotation 80s infinite linear;
+    -o-animation: rotation 80s infinite linear;
+    animation: rotation 80s infinite linear;
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+}
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
+@-moz-keyframes rotation {
+    from {-moz-transform: rotate(0deg);}
+    to   {-moz-transform: rotate(359deg);}
+}
+@-o-keyframes rotation {
+    from {-o-transform: rotate(0deg);}
+    to   {-o-transform: rotate(359deg);}
+}
+@keyframes rotation {
+    from {transform: rotate(0deg);}
+    to   {transform: rotate(359deg);}
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+.shakey{
+  color: gray;
+}
+.shakey:hover{
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  font-size: 300px;
+}
+
+ul {
+  box-sizing: border-box;
+  overflow: hidden;
+  perspective: 900px;
+  list-style: none;
+  height: 70vh;
+  max-height: 1200px;
+  min-height: 750px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+@keyframes width-sway {
+  0%, 100% {
+    width: 500px;
+  }
+  50% {
+    width: 100%;
+  }
+}
+li {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: translateY(100vh);
+  font-size: 2.4em;
+  font-weight: bold;
+  animation: 12s spiral-staircase linear infinite;
+}
+
+li:nth-child(1) {
+  animation-delay: 0s;
+}
+
+li:nth-child(2) {
+  animation-delay: 2s;
+}
+
+li:nth-child(3) {
+  animation-delay: 3s;
+}
+
+li:nth-child(4) {
+  animation-delay: 4s;
+}
+
+li:nth-child(5) {
+  animation-delay: 5s;
+}
+
+li:nth-child(6) {
+  animation-delay: 6s;
+}
+
+li:nth-child(7) {
+  animation-delay: 7s;
+}
+
+li:nth-child(8) {
+  animation-delay: 8s;
+}
+
+li:nth-child(9) {
+  animation-delay: 9s;
+}
+
+li:nth-child(10) {
+  animation-delay: 10s;
+}
+
+li:nth-child(11) {
+  animation-delay: 11s;
+}
+
+li:nth-child(12) {
+  animation-delay: 12s;
+}
+
+li:nth-child(1) {
+  right: 1rem;
+}
+
+li:nth-last-child(1) {
+  right: 1rem;
+}
+
+li:nth-child(2) {
+  right: 2rem;
+}
+
+li:nth-last-child(2) {
+  right: 2rem;
+}
+
+li:nth-child(3) {
+  right: 3rem;
+}
+
+li:nth-last-child(3) {
+  right: 3rem;
+}
+
+li:nth-child(4) {
+  right: 4rem;
+}
+
+li:nth-last-child(4) {
+  right: 4rem;
+}
+
+li:nth-child(5) {
+  right: 5rem;
+}
+
+li:nth-last-child(5) {
+  right: 5rem;
+}
+
+li:nth-child(6) {
+  right: 6rem;
+}
+
+li:nth-last-child(6) {
+  right: 6rem;
+}
+
+@keyframes spiral-staircase {
+  0% {
+    transform: rotateY(90deg) translateY(105vh) rotate(0deg);
+  }
+  50% {
+    transform: rotateY(0deg) translateY(50vh) rotate(0deg);
+  }
+  100% {
+    transform: rotateY(-90deg) translateY(-5vh) rotate(0deg);
+  }
+}
+
+#story{
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
