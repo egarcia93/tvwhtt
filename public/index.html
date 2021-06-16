@@ -485,6 +485,11 @@ li:nth-last-child(6) {
 #story{
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+a.thread{
+
+  color: red;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;song&quot; &quot;data/track.wav&quot; &gt;&gt;
  
 /* &lt;&lt;script&gt;&gt;
@@ -597,14 +602,10 @@ UIBar.destroy();
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
-[[E|Link]] [[n|Link]] [[t|Link]] [[e|Link]] [[r|Link]] [[i|Link]] [[n|Link]] [[g|Link]] blindfolded to a garden of forked paths ,
+[[E|Light Green]] [[n|Grey]] [[t|White]] [[e|Red]] [[r|Blue]] [[i|Saffron]] [[n|Yellow]] [[g|Black]] blindfolded to a garden of forked paths ,
 Every wall is different, 
 there is no distiction at all.
-&lt;&lt;set $counter to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Link" tags="" position="1225,100" size="100,100">&lt;&lt;script&gt;&gt;
-UIBar.destroy();
-&lt;&lt;/script&gt;&gt;
-
-&lt;&lt;goto `either(&quot;Light Green&quot;, &quot;White&quot;, &quot;Red&quot;,&quot;Grey&quot;,&quot;Blue&quot;,&quot;Black&quot;,&quot;Saffron&quot;,&quot;Yellow&quot;)`&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Light Green" tags="green" position="100,225" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;&lt;set $counter to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Light Green" tags="green" position="1225,100" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 [img[&quot;data/Green.png&quot;]]
@@ -613,7 +614,7 @@ UIBar.destroy();
 
 Flowers and grass around [[everything|Grey]], 
 that smile hidden behind the [[sunlight|Red]],
-the [[eyes|White]] of a butterfly.</tw-passagedata><tw-passagedata pid="12" name="White" tags="white" position="225,225" size="100,100">[img[&quot;data/White.png&quot;]]
+the [[eyes|White]] of a butterfly.</tw-passagedata><tw-passagedata pid="11" name="White" tags="white" position="100,225" size="100,100">[img[&quot;data/White.png&quot;]]
 &lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
@@ -622,7 +623,7 @@ UIBar.destroy();
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 The mocking smile of a kid,
 feeling shy but everyone [[laughing|Red]],
-everybody is a [[star|Light Green]].</tw-passagedata><tw-passagedata pid="13" name="Red" tags="red" position="350,225" size="100,100">&lt;&lt;script&gt;&gt;
+everybody is a [[star|Light Green]].</tw-passagedata><tw-passagedata pid="12" name="Red" tags="red" position="225,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 [img[&quot;data/Red.png&quot;]]
@@ -630,7 +631,7 @@ UIBar.destroy();
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 And suddenly you are [[yelling|Light Green]],
 fire comes out of you [[throat|Yellow]],
-your [[guts|Blue]] and your head are boiling.</tw-passagedata><tw-passagedata pid="14" name="Grey" tags="grey" position="475,225" size="100,100">&lt;&lt;script&gt;&gt;
+your [[guts|Blue]] and your head are boiling.</tw-passagedata><tw-passagedata pid="13" name="Grey" tags="grey" position="350,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 [img[&quot;data/Gray.png&quot;]]
@@ -638,7 +639,7 @@ UIBar.destroy();
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 Do you care about them?
 Probably you think about it all the [[time|Light Green]],
-helping would be [[silently|Blue]] appreciated.</tw-passagedata><tw-passagedata pid="15" name="Blue" tags="blue" position="600,225" size="100,100">&lt;&lt;script&gt;&gt;
+helping would be [[silently|Blue]] appreciated.</tw-passagedata><tw-passagedata pid="14" name="Blue" tags="blue" position="475,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 [img[&quot;data/Blue.png&quot;]]
@@ -646,7 +647,7 @@ UIBar.destroy();
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 Just [[look|Light Green]] [[away|Grey]],
 that [[smell|Grey]] is [[unbearable|Saffron]],
-the [[feeling|Black]] of being [[apart|Yellow]].</tw-passagedata><tw-passagedata pid="16" name="Black" tags="black" position="725,225" size="100,100">&lt;&lt;script&gt;&gt;
+the [[feeling|Black]] of being [[apart|Yellow]].</tw-passagedata><tw-passagedata pid="15" name="Black" tags="black" position="600,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 [img[&quot;data/Black.png&quot;]]
@@ -654,7 +655,7 @@ UIBar.destroy();
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 A [[[thousand|Saffron]] whispers,
 with a hundred [[mouths|Blue]],
-climbing from your spine to your [[head|Yellow]].</tw-passagedata><tw-passagedata pid="17" name="Saffron" tags="saffron" position="850,225" size="100,100">&lt;&lt;script&gt;&gt;
+climbing from your spine to your [[head|Yellow]].</tw-passagedata><tw-passagedata pid="16" name="Saffron" tags="saffron" position="725,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 [img[&quot;data/Saffron.png&quot;]]
@@ -662,7 +663,7 @@ UIBar.destroy();
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 Stand against the [[unpredictable|Black]] faith,
 battle the [[uncertain|Grey]],
-do your [[will|Blue]].</tw-passagedata><tw-passagedata pid="18" name="Yellow" tags="yellow" position="975,225" size="100,100">&lt;&lt;script&gt;&gt;
+do your [[will|Blue]].</tw-passagedata><tw-passagedata pid="17" name="Yellow" tags="yellow" position="850,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 [img[&quot;data/Yellow.png&quot;]]
@@ -670,11 +671,14 @@ UIBar.destroy();
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 Is this feeling something [[new|Red]]?
 An emotion you may [[lost|Blue]],
-Unveiling [[curtains|Black]] under the rain.</tw-passagedata><tw-passagedata pid="19" name="Oratory" tags="" position="1100,225" size="100,100">&lt;&lt;script&gt;&gt;
+Unveiling [[curtains|Black]] under the rain.</tw-passagedata><tw-passagedata pid="18" name="Oratory" tags="" position="975,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
-
+A shared path,
+to giving back to the others.
+The ones before you,
+the ones that will come after.
 
 &lt;input id= &quot;oratory-input&quot; placeholder=&quot;Leave here what you got&quot; size=&quot;30&quot;&gt;
 
@@ -706,7 +710,7 @@ UIBar.destroy();
 
 &lt;&lt;/script&gt;&gt;
 
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Alert" tags="alert" position="1225,225" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Alert" tags="alert" position="1100,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
@@ -765,29 +769,29 @@ function run(){
 
  
 
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Tangled" tags="tangled" position="100,350" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Tangled" tags="tangled" position="1225,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
 &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;  Se[[e|Alert]]ms &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; like 
 &amp;emsp;&amp;emsp;&amp;emsp;you&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;[[a|Door]]re
-&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;[[t|Rest]]angled &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;up</tw-passagedata><tw-passagedata pid="22" name="Door" tags="doors" position="225,350" size="100,100">&lt;&lt;script&gt;&gt;
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;[[t|Rest]]angled &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;up</tw-passagedata><tw-passagedata pid="21" name="Door" tags="doors" position="100,350" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
- Are you looking for an [[exit-&gt;Door1]]?</tw-passagedata><tw-passagedata pid="23" name="Door1" tags="door1" position="350,350" size="100,100">&lt;&lt;script&gt;&gt;
+ Are you looking for an [[exit-&gt;Door1]]?</tw-passagedata><tw-passagedata pid="22" name="Door1" tags="door1" position="225,350" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
-There is something you must [[know-&gt;Door2]]</tw-passagedata><tw-passagedata pid="24" name="Door2" tags="door2" position="475,350" size="100,100">&lt;&lt;script&gt;&gt;
+There is something you must [[know-&gt;Door2]]</tw-passagedata><tw-passagedata pid="23" name="Door2" tags="door2" position="350,350" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
-There is [[no...-&gt;Door3]]</tw-passagedata><tw-passagedata pid="25" name="Door3" tags="door3" position="600,350" size="100,100">&lt;&lt;script&gt;&gt;
+There is [[no...-&gt;Door3]]</tw-passagedata><tw-passagedata pid="24" name="Door3" tags="door3" position="475,350" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
-[[EXIT-&gt;Alert]]</tw-passagedata><tw-passagedata pid="26" name="Rest" tags="" position="725,350" size="100,100">&lt;&lt;script&gt;&gt;
+[[EXIT-&gt;Alert]]</tw-passagedata><tw-passagedata pid="25" name="Rest" tags="" position="600,350" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
@@ -801,13 +805,13 @@ Wait until  the door opens.
 
 &lt;span class=&quot;breath&quot;&gt;Just breathe&lt;/span&gt;
 
-&lt;span class=&quot;appear_4&quot;&gt;[[Lets go|String]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="27" name="String" tags="" position="850,350" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;span class=&quot;appear_4&quot;&gt;[[Lets go|String]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="26" name="String" tags="string" position="725,350" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 
 &lt;&lt;/script&gt;&gt;
 
 
-[[Pull the string|The Hall]]</tw-passagedata><tw-passagedata pid="28" name="The Hall" tags="" position="975,350" size="100,100">&lt;a data-passage=&quot;Credits&quot;&gt;&lt;ul id=&quot;messages&quot;&gt;&lt;/ul&gt;&lt;/a&gt;
+[[Pull the thread|The Hall]]</tw-passagedata><tw-passagedata pid="27" name="The Hall" tags="" position="850,350" size="100,100">&lt;a data-passage=&quot;Credits&quot;&gt;&lt;ul id=&quot;messages&quot;&gt;&lt;/ul&gt;&lt;/a&gt;
 &lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
@@ -833,7 +837,7 @@ UIBar.destroy();
             element.appendChild(para);
           }
         });
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Credits" tags="" position="1100,350" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Credits" tags="" position="975,350" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 

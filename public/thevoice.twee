@@ -148,18 +148,10 @@ UIBar.destroy();
 UIBar.destroy();
 <</script>>
 
-[[E|Link]] [[n|Link]] [[t|Link]] [[e|Link]] [[r|Link]] [[i|Link]] [[n|Link]] [[g|Link]] blindfolded to a garden of forked paths ,
+[[E|Light Green]] [[n|Grey]] [[t|White]] [[e|Red]] [[r|Blue]] [[i|Saffron]] [[n|Yellow]] [[g|Black]] blindfolded to a garden of forked paths ,
 Every wall is different, 
 there is no distiction at all.
 <<set $counter to 0>>
-
-
-:: Link
-<<script>>
-UIBar.destroy();
-<</script>>
-
-<<goto `either("Light Green", "White", "Red","Grey","Blue","Black","Saffron","Yellow")`>>
 
 :: Light Green [green]
 
@@ -270,7 +262,10 @@ Unveiling [[curtains|Black]] under the rain.
 UIBar.destroy();
 <</script>>
 
-
+A shared path,
+to giving back to the others.
+The ones before you,
+the ones that will come after.
 
 <input id= "oratory-input" placeholder="Leave here what you got" size="30">
 
@@ -423,7 +418,7 @@ Wait until  the door opens.
 
 <span class="appear_4">[[Lets go|String]]</span>
 
-:: String 
+:: String [string]
 
 
 <<script>>
@@ -432,7 +427,7 @@ UIBar.destroy();
 <</script>>
 
 
-[[Pull the string|The Hall]]
+[[Pull the thread|The Hall]]
    
 :: The Hall
 <a data-passage="Credits"><ul id="messages"></ul></a>
@@ -865,3 +860,7 @@ li:nth-last-child(6) {
   margin-bottom: 0px;
 }
 
+a.thread{
+
+  color: red;
+}
