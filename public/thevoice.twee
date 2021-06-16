@@ -44,8 +44,8 @@ UIBar.destroy();
 <</script>>
 
 A seamless  room, filled with hexagon tiles. 
-You feel like floating and still.
-Nobody around you, no one can hear you.
+You feel like floating and still,
+nobody around you, no one can hear you.
 
 YOU start to dissolve
 
@@ -60,10 +60,14 @@ YOU start to dissolve
 UIBar.destroy();
 <</script>>
 
+Alone,
 Alone, again...
 That soft feeling surrounding you
-Here ''[[NOBODY|AloneRoom]]'' can hurt you
-Out of the reach of any danger from the outside
+The tenderness of the ice cold loneliness.
+But you know ''[[NOBODY|AloneRoom]]'' can hurt you
+Out of the reach of any danger,
+Out of the sight of anybody,
+Out of everywhere.
 Just you...
 
 You and the darkness...
@@ -71,7 +75,8 @@ You and the darkness...
 <div class=reveal>
 Is it just you?
 
-Do you want to [[go out|Waiting]] or you are willing to get [[going|RabbitHole]]
+You start to wander around, and suddenly stop.
+Should you  [[go out|Waiting]] or you are willing to keep [[going?|RabbitHole]]
 
 </div>
 
@@ -87,7 +92,8 @@ UIBar.destroy();
 <<script>>
 UIBar.destroy();
 <</script>>
-You are stil trapped [[here|AloneRoom]] the best will be to face the danger and [[keep going|RabbitHole]]
+Still trapped [[here|AloneRoom]] 
+And will always be, unless  you [[keep going.|RabbitHole]]
 
 :: RabbitHole [hole]
 <<script>>
@@ -108,7 +114,7 @@ UIBar.destroy();
     </article>
 
 <footer class=door>
-  <p >What is behind the [[door|Tunnel]]</p>
+  <p >What is behind the [[door?|Tunnel]]</p>
 </footer>
 
 :: Tunnel [tunnel]
@@ -126,14 +132,12 @@ UIBar.destroy();
 
   <text id="MyText" font-family="Verdana" font-size="50" fill="white" >
     <textPath xlink:href="#MyPath" >
-    Hold on to this red twine
-    Hold to your memories and tak a step further
-    Don't look back
-    Maybe it was days..
-    Months....
-    Even years...
-    Since you got here
-    Remember and look through
+    Hold on to this red twine,
+    hold it with all your strenght.
+    Use it to get out,
+    leave  your memories and then
+    don't look back.
+    Look through.
 
     </textPath>
     </text>
@@ -162,57 +166,38 @@ UIBar.destroy();
 <<script>>
 UIBar.destroy();
 <</script>>
-
+[img["data/Green.png"]]
 <<set $counter to $counter + 1>>
 <<if $counter is 4>><<goto "Oratory">><</if>>
 
-[[Romance|LinkG]]
+Flowers and grass around [[everything|Grey]], 
+that smile hidden behind the [[sunlight|Red]],
+the [[eyes|White]] of a butterfly.
 
-:: LinkG [green]
-
-<<script>>
-UIBar.destroy();
-<</script>>
-
-
-<<goto `either("White", "Red","Grey","Blue","Black","Saffron","Yellow")`>>
 
 :: White [white]
-
+[img["data/White.png"]]
 <<script>>
 UIBar.destroy();
 <</script>>
 
 <<set $counter to $counter + 1>>
 <<if $counter is 4>><<goto "Oratory">><</if>>
-[[Comedy|LinkW]]
-
-:: LinkW [white]
-
-<<script>>
-UIBar.destroy();
-<</script>>
-
-<<goto `either("Light Green", "Red","Grey","Blue","Black","Saffron","Yellow")`>>
-
+The mocking smile of a kid,
+feeling shy but everyone [[laughing|Red]],
+everybody is a [[star|Light Green]].
 
 :: Red [red]
 
 <<script>>
 UIBar.destroy();
 <</script>>
-
+[img["data/Red.png"]]
 <<set $counter to $counter + 1>>
 <<if $counter is 4>><<goto "Oratory">><</if>>
-[[Fury|LinkR]]
-
-:: LinkR [red]
-
-<<script>>
-UIBar.destroy();
-<</script>>
-
-<<goto `either("Light Green", "White","Grey","Blue","Black","Saffron","Yellow")`>>
+And suddenly you are [[yelling|Light Green]],
+fire comes out of you [[throat|Yellow]],
+your [[guts|Blue]] and your head are boiling.
 
 
 :: Grey [grey]
@@ -220,91 +205,63 @@ UIBar.destroy();
 <<script>>
 UIBar.destroy();
 <</script>>
-
+[img["data/Gray.png"]]
 <<set $counter to $counter + 1>>
 <<if $counter is 4>><<goto "Oratory">><</if>>
-[[Compassion|LinkGr]]
-
-:: LinkGr [grey]
-
-<<script>>
-UIBar.destroy();
-<</script>>
-
-<<goto `either("Light Green", "White", "Red","Blue","Black","Saffron","Yellow")`>>
+Do you care about them?
+Probably you think about it all the [[time|Light Green]],
+helping would be [[silently|Blue]] appreciated.
 
 :: Blue [blue]
 
 <<script>>
 UIBar.destroy();
 <</script>>
-
+[img["data/Blue.png"]]
 <<set $counter to $counter + 1>>
 <<if $counter is 4>><<goto "Oratory">><</if>>
-[[Disgust|LinkB]]
+Just [[look|Light Green]] [[away|Grey]],
+that [[smell|Grey]] is [[unbearable|Saffron]],
+the [[feeling|Black]] of being [[apart|Yellow]].
 
-:: LinkB [blue]
-
-<<script>>
-UIBar.destroy();
-<</script>>
-
-<<goto `either("Light Green", "White", "Red","Grey","Black","Saffron","Yellow")`>>
 
 :: Black [black]
 
 <<script>>
 UIBar.destroy();
 <</script>>
-
+[img["data/Black.png"]]
 <<set $counter to $counter + 1>>
 <<if $counter is 4>><<goto "Oratory">><</if>>
-[[Horror|LinkBl]]
+A [[[thousand|Saffron]] whispers,
+with a hundred [[mouths|Blue]],
+climbing from your spine to your [[head|Yellow]].
 
-:: LinkBl [black]
-
-<<script>>
-UIBar.destroy();
-<</script>>
-
-<<goto `either("Light Green", "White", "Red","Grey","Blue","Saffron","Yellow")`>>
 
 :: Saffron [saffron]
 
 <<script>>
 UIBar.destroy();
 <</script>>
-
+[img["data/Saffron.png"]]
 <<set $counter to $counter + 1>>
 <<if $counter is 4>><<goto "Oratory">><</if>>
-[[Heroism|LinkS]]
+Stand against the [[unpredictable|Black]] faith,
+battle the [[uncertain|Grey]],
+do your [[will|Blue]].
 
-:: LinkS [saffron]
-
-<<script>>
-UIBar.destroy();
-<</script>>
-
-<<goto `either("Light Green", "White", "Red","Grey","Blue","Black","Yellow")`>>
 
 :: Yellow [yellow]
 
 <<script>>
 UIBar.destroy();
 <</script>>
-
+[img["data/Yellow.png"]]
 <<set $counter to $counter + 1>>
 <<if $counter is 4>><<goto "Oratory">><</if>>
-[[Wonder|LinkY]]
-
-:: LinkY [yellow]
-
-<<script>>
-UIBar.destroy();
-<</script>>
-
-<<goto `either("Light Green", "White", "Red","Grey","Blue","Black","Saffron")`>>
-
+Is this feeling something [[new|Red]]?
+An emotion you may [[lost|Blue]],
+Unveiling [[curtains|Black]] under the rain.
 
 
 :: Oratory
@@ -315,9 +272,9 @@ UIBar.destroy();
 
 
 
-<input id= "oratory-input" placeholder="Write here">
+<input id= "oratory-input" placeholder="Leave here what you got" size="30">
 
-<<link [[Go on|Alert]] >>
+<<link [[What is that sound?|Alert]] >>
 
 <<script>>
       
@@ -454,10 +411,13 @@ UIBar.destroy();
 UIBar.destroy();
 <</script>>
 
-Stop there
-Take a break
-Maybe the maze is inside?
-The door will not open in some time
+Stop there,
+Take a last breath.
+
+The maze is at the inside not behind the walls.
+
+Wait until  the door opens.
+
 
 <span class="breath">Just breathe</span>
 
@@ -658,41 +618,7 @@ position: absolute;
   justify-content: center;
 }
 
-.green{
 
-  background-color: green;
-}
-
-.white{
-  background-color: white;
-
-}
-
-.red{
-  background-color:red;
-
-}
-
-.grey{
-  background-color:grey;
-}
-
-.blue{
-  background-color: blue;
-}
-
-.black{
-  background-color:black;
-}
-
-.saffron{
-  background-color:#f93;
-
-}
-
-.yellow{
-  background-color:yellow;
-}
 
 #run{
   visibility: hidden;
