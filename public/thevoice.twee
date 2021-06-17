@@ -262,12 +262,12 @@ Unveiling [[curtains|Black]] under the rain.
 UIBar.destroy();
 <</script>>
 
-A shared path,
-to giving back to the others.
 The ones before you,
 the ones that will come after.
+A shared path for leaving behind,
+write and become part of this maze.
 
-<input id= "oratory-input" placeholder="Leave here what you got" size="30">
+<input id= "oratory-input" placeholder="Leave something behind" size="30">
 
 <<link [[What is that sound?|Alert]] >>
 
@@ -430,7 +430,7 @@ UIBar.destroy();
 [[Pull the thread|The Hall]]
    
 :: The Hall
-<a data-passage="Credits"><ul id="messages"></ul></a>
+<ul id="messages"></ul>
 <<script>>
 UIBar.destroy();
 <</script>>
@@ -457,6 +457,9 @@ UIBar.destroy();
           }
         });
 <</script>>
+Did you found your trace?
+Now you are [[out|Credits]] of the maze
+
 :: Credits
 <<script>>
 UIBar.destroy();
@@ -794,6 +797,30 @@ li:nth-child(11) {
 li:nth-child(12) {
   animation-delay: 12s;
 }
+li:nth-child(13) {
+  animation-delay: 13s;
+}
+li:nth-child(14) {
+  animation-delay: 14s;
+}
+li:nth-child(15) {
+  animation-delay: 15s;
+}
+li:nth-child(16) {
+  animation-delay: 16s;
+}
+li:nth-child(17) {
+  animation-delay: 17s;
+}
+li:nth-child(18) {
+  animation-delay: 18s;
+}
+li:nth-child(19) {
+  animation-delay: 19s;
+}
+li:nth-child(20) {
+  animation-delay: 20s;
+}
 
 li:nth-child(1) {
   right: 1rem;
@@ -843,6 +870,38 @@ li:nth-last-child(6) {
   right: 6rem;
 }
 
+li:nth-child(7) {
+  right: 7rem;
+}
+
+li:nth-last-child(7) {
+  right: 7rem;
+}
+
+li:nth-child(8) {
+  right: 8rem;
+}
+
+li:nth-last-child(8) {
+  right: 8rem;
+}
+
+li:nth-child(9) {
+  right: 9rem;
+}
+
+li:nth-last-child(9) {
+  right: 9rem;
+}
+
+li:nth-child(10) {
+  right: 10rem;
+}
+
+li:nth-last-child(10) {
+  right: 10rem;
+}
+
 @keyframes spiral-staircase {
   0% {
     transform: rotateY(90deg) translateY(105vh) rotate(0deg);
@@ -860,7 +919,7 @@ li:nth-last-child(6) {
   margin-bottom: 0px;
 }
 
-a.thread{
+a.string{
 
   color: red;
 }
