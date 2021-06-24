@@ -557,6 +557,8 @@ a.string{
 &lt;&lt;cacheaudio &quot;random&quot; &quot;data/random.mp3&quot; &gt;&gt;
 &lt;&lt;cacheaudio &quot;tellus&quot; &quot;data/tellus_kelsie.mp3&quot; &gt;&gt;
 &lt;&lt;cacheaudio &quot;underskin&quot; &quot;data/underskin.mp3&quot; &gt;&gt;
+&lt;&lt;cacheaudio &quot;growl&quot; &quot;data/growl.mp3&quot; &gt;&gt;
+&lt;&lt;cacheaudio &quot;bug&quot; &quot;data/bug.mp3&quot;&gt;&gt;
 
 /* &lt;&lt;script&gt;&gt;
 
@@ -617,12 +619,12 @@ Should you  [[go out|Waiting]] or you are willing to keep [[going?|RabbitHole]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="AloneRoom" tags="" position="600,100" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
-&lt;&lt;timed 1s&gt;&gt;
-&lt;&lt;audio &quot;nobody&quot; volume 0.2 play&gt;&gt;
-&lt;&lt;/timed&gt;&gt;
 &lt;div class=candle&gt;
 [img[&#39;data/Candle.gif&#39;][Alone]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Waiting" tags="" position="725,100" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;timed 1s&gt;&gt;
+&lt;&lt;audio &quot;nobody&quot; volume 0.1 play&gt;&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Waiting" tags="" position="725,100" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 Still trapped [[here|AloneRoom]] 
@@ -697,7 +699,7 @@ UIBar.destroy();
 
 &lt;&lt;set $counter to $counter + 1&gt;&gt;
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;audio &quot;laugh&quot; volume 0.2 play&gt;&gt;
+&lt;&lt;audio &quot;laugh&quot; volume 0.1 play&gt;&gt;
 The mocking smile of a kid,
 feeling shy but everyone [[laughing|Red]],
 everybody is a [[star|Light Green]].</tw-passagedata><tw-passagedata pid="12" name="Red" tags="red" position="225,225" size="100,100">&lt;&lt;script&gt;&gt;
@@ -733,7 +735,8 @@ UIBar.destroy();
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 A [[thousand|Saffron]] whispers,
 with a hundred [[mouths|Blue]],
-climbing from your spine to your [[head|Yellow]].</tw-passagedata><tw-passagedata pid="16" name="Saffron" tags="saffron" position="725,225" size="100,100">&lt;&lt;script&gt;&gt;
+climbing from your spine to your [[head|Yellow]].
+&lt;&lt;audio &quot;bug&quot; volume 0.7 play&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Saffron" tags="saffron" position="725,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 [img[&quot;data/Saffron.png&quot;]]
@@ -757,7 +760,7 @@ The ones before you,
 the ones that will come after.
 A shared path for leaving behind,
 write and become part of this maze.
-&lt;&lt;audio &quot;leave&quot; volume 0.2 play&gt;&gt;
+&lt;&lt;audio &quot;leave&quot; volume 0.3 play&gt;&gt;
 
 &lt;&lt;timed 2s&gt;&gt;
 &lt;&lt;audio &quot;tellus&quot; volume 0.2 play&gt;&gt;
@@ -851,7 +854,9 @@ function run(){
 
  
 
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Tangled" tags="tangled" position="1225,225" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;&lt;/script&gt;&gt;
+
+&lt;&lt;audio &quot;growl&quot; volume 1 play &gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Tangled" tags="tangled" position="1225,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
@@ -914,8 +919,8 @@ UIBar.destroy();
         .then(response =&gt;{
           //console.log(&quot;response&quot;);
           messageArray = response;
-          console.log(messageArray);
-          for(let i = messageArray.length -1 ; i&gt;0; i--){
+          console.log(messageArray.length);
+          for(let i = messageArray.length -1; i&gt;15; i--){
             var para = document.createElement(&quot;li&quot;);
             var node = document.createTextNode(messageArray[i].message);
             para.appendChild(node);

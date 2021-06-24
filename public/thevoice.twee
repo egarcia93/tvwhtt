@@ -23,6 +23,8 @@ The voice we hear through time
 <<cacheaudio "random" "data/random.mp3" >>
 <<cacheaudio "tellus" "data/tellus_kelsie.mp3" >>
 <<cacheaudio "underskin" "data/underskin.mp3" >>
+<<cacheaudio "growl" "data/growl.mp3" >>
+<<cacheaudio "bug" "data/bug.mp3">>
 
 /* <<script>>
 
@@ -97,12 +99,12 @@ Should you  [[go out|Waiting]] or you are willing to keep [[going?|RabbitHole]]
 <<script>>
 UIBar.destroy();
 <</script>>
-<<timed 1s>>
-<<audio "nobody" volume 0.2 play>>
-<</timed>>
 <div class=candle>
 [img['data/Candle.gif'][Alone]]
 </div>
+<<timed 1s>>
+<<audio "nobody" volume 0.1 play>>
+<</timed>>
 
 :: Waiting
 <<script>>
@@ -196,7 +198,7 @@ UIBar.destroy();
 
 <<set $counter to $counter + 1>>
 <<if $counter is 4>><<goto "Oratory">><</if>>
-<<audio "laugh" volume 0.2 play>>
+<<audio "laugh" volume 0.1 play>>
 The mocking smile of a kid,
 feeling shy but everyone [[laughing|Red]],
 everybody is a [[star|Light Green]].
@@ -251,6 +253,7 @@ UIBar.destroy();
 A [[thousand|Saffron]] whispers,
 with a hundred [[mouths|Blue]],
 climbing from your spine to your [[head|Yellow]].
+<<audio "bug" volume 0.7 play>>
 
 
 :: Saffron [saffron]
@@ -289,7 +292,7 @@ The ones before you,
 the ones that will come after.
 A shared path for leaving behind,
 write and become part of this maze.
-<<audio "leave" volume 0.2 play>>
+<<audio "leave" volume 0.3 play>>
 
 <<timed 2s>>
 <<audio "tellus" volume 0.2 play>>
@@ -389,6 +392,8 @@ function run(){
 
 <</script>>
 
+<<audio "growl" volume 1 play >>
+
 :: Tangled[tangled]
 
 <<script>>
@@ -476,8 +481,8 @@ UIBar.destroy();
         .then(response =>{
           //console.log("response");
           messageArray = response;
-          console.log(messageArray);
-          for(let i = messageArray.length -1 ; i>0; i--){
+          console.log(messageArray.length);
+          for(let i = messageArray.length -1; i>15; i--){
             var para = document.createElement("li");
             var node = document.createTextNode(messageArray[i].message);
             para.appendChild(node);
