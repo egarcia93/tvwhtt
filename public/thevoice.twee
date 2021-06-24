@@ -13,7 +13,17 @@ The voice we hear through time
 :: StoryInit
 
 <<cacheaudio "song" "data/track.wav" >>
- 
+<<cacheaudio "dissolve" "data/dissolve.mp3" >>
+<<cacheaudio "godown" "data/godown.mp3" >>
+<<cacheaudio "help" "data/help.mp3" >>
+<<cacheaudio "laugh" "data/laugh.mp3" >>
+<<cacheaudio "leave" "data/leave_michael.mp3" >>
+<<cacheaudio "losto" "data/losto.mp3" >>
+<<cacheaudio "nobody" "data/nobody.mp3" >>
+<<cacheaudio "random" "data/random.mp3" >>
+<<cacheaudio "tellus" "data/tellus_kelsie.mp3" >>
+<<cacheaudio "underskin" "data/underskin.mp3" >>
+
 /* <<script>>
 
 var audio = document.createElement('audio');
@@ -29,7 +39,7 @@ window.onclick = function(event){
 
 :: Start [start]
 
-<<audio "song" play>>
+<<audio "song" volume 0.7 play>>
 <<script>>
 UIBar.destroy();
 <</script>>
@@ -54,7 +64,9 @@ YOU start to dissolve
 <span class=appear_2>YO</span>
 
 <span class=appear_3>[[Y|Alone]]</span>
-
+<<timed 1s>>
+<<audio "dissolve" volume 0.2 play>>
+<</timed>>
 :: Alone
 <<script>>
 UIBar.destroy();
@@ -71,7 +83,6 @@ Out of everywhere.
 Just you...
 
 You and the darkness...
-
 <div class=reveal>
 Is it just you?
 
@@ -80,10 +91,15 @@ Should you  [[go out|Waiting]] or you are willing to keep [[going?|RabbitHole]]
 
 </div>
 
+
+
 :: AloneRoom
 <<script>>
 UIBar.destroy();
 <</script>>
+<<timed 1s>>
+<<audio "nobody" volume 0.2 play>>
+<</timed>>
 <div class=candle>
 [img['data/Candle.gif'][Alone]]
 </div>
@@ -106,7 +122,10 @@ UIBar.destroy();
   var rellax = new Rellax('.rellax');
 </script>
 
-
+<<audio "underskin" volume 0.2 play>>
+<<timed 3s>>
+<<audio "godown" volume 0.2 play>>
+<</timed>>
 <article class="content">
       <div class="one rellax" data-rellax-speed="5">You</div>
       <div class="two">are</div>
@@ -121,6 +140,8 @@ UIBar.destroy();
 <<script>>
 UIBar.destroy();
 <</script>>
+
+<<audio "random" volume 0.2 play>>
 <a data-passage="Forking">
 <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="100%" heihgt="100%" viewBox="0 150 744 1052" id="svg2"  version="1">
    
@@ -175,6 +196,7 @@ UIBar.destroy();
 
 <<set $counter to $counter + 1>>
 <<if $counter is 4>><<goto "Oratory">><</if>>
+<<audio "laugh" volume 0.2 play>>
 The mocking smile of a kid,
 feeling shy but everyone [[laughing|Red]],
 everybody is a [[star|Light Green]].
@@ -200,6 +222,7 @@ UIBar.destroy();
 [img["data/Gray.png"]]
 <<set $counter to $counter + 1>>
 <<if $counter is 4>><<goto "Oratory">><</if>>
+<<audio "help" volume 0.3 play>>
 Do you care about them?
 Probably you think about it all the [[time|Light Green]],
 helping would be [[silently|Blue]] appreciated.
@@ -225,7 +248,7 @@ UIBar.destroy();
 [img["data/Black.png"]]
 <<set $counter to $counter + 1>>
 <<if $counter is 4>><<goto "Oratory">><</if>>
-A [[[thousand|Saffron]] whispers,
+A [[thousand|Saffron]] whispers,
 with a hundred [[mouths|Blue]],
 climbing from your spine to your [[head|Yellow]].
 
@@ -266,7 +289,11 @@ The ones before you,
 the ones that will come after.
 A shared path for leaving behind,
 write and become part of this maze.
+<<audio "leave" volume 0.2 play>>
 
+<<timed 2s>>
+<<audio "tellus" volume 0.2 play>>
+<</timed>>
 <input id= "oratory-input" placeholder="Leave something behind" size="30">
 
 <<link [[What is that sound?|Alert]] >>
@@ -372,7 +399,9 @@ UIBar.destroy();
 &emsp;&emsp;&emsp;you&emsp;&emsp;&emsp;&emsp;&emsp;[[a|Door]]re
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[[t|Rest]]angled &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;up
  
-
+ <<timed 1s>>
+<<audio "losto" volume 0.2 play>>
+<</timed>>
 :: Door [doors]
 <<script>>
 UIBar.destroy();
@@ -448,7 +477,7 @@ UIBar.destroy();
           //console.log("response");
           messageArray = response;
           console.log(messageArray);
-          for(let i = 0 ; i<messageArray.length; i++){
+          for(let i = messageArray.length -1 ; i>0; i--){
             var para = document.createElement("li");
             var node = document.createTextNode(messageArray[i].message);
             para.appendChild(node);

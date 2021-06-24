@@ -547,7 +547,17 @@ a.string{
 
   color: red;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;song&quot; &quot;data/track.wav&quot; &gt;&gt;
- 
+&lt;&lt;cacheaudio &quot;dissolve&quot; &quot;data/dissolve.mp3&quot; &gt;&gt;
+&lt;&lt;cacheaudio &quot;godown&quot; &quot;data/godown.mp3&quot; &gt;&gt;
+&lt;&lt;cacheaudio &quot;help&quot; &quot;data/help.mp3&quot; &gt;&gt;
+&lt;&lt;cacheaudio &quot;laugh&quot; &quot;data/laugh.mp3&quot; &gt;&gt;
+&lt;&lt;cacheaudio &quot;leave&quot; &quot;data/leave_michael.mp3&quot; &gt;&gt;
+&lt;&lt;cacheaudio &quot;losto&quot; &quot;data/losto.mp3&quot; &gt;&gt;
+&lt;&lt;cacheaudio &quot;nobody&quot; &quot;data/nobody.mp3&quot; &gt;&gt;
+&lt;&lt;cacheaudio &quot;random&quot; &quot;data/random.mp3&quot; &gt;&gt;
+&lt;&lt;cacheaudio &quot;tellus&quot; &quot;data/tellus_kelsie.mp3&quot; &gt;&gt;
+&lt;&lt;cacheaudio &quot;underskin&quot; &quot;data/underskin.mp3&quot; &gt;&gt;
+
 /* &lt;&lt;script&gt;&gt;
 
 var audio = document.createElement(&#39;audio&#39;);
@@ -559,7 +569,7 @@ window.onclick = function(event){
   console.log(&quot;hir&quot;);
 
 }
-&lt;&lt;/script&gt;&gt; */</tw-passagedata><tw-passagedata pid="2" name="Start" tags="start" position="225,100" size="100,100">&lt;&lt;audio &quot;song&quot; play&gt;&gt;
+&lt;&lt;/script&gt;&gt; */</tw-passagedata><tw-passagedata pid="2" name="Start" tags="start" position="225,100" size="100,100">&lt;&lt;audio &quot;song&quot; volume 0.7 play&gt;&gt;
 &lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
@@ -580,7 +590,10 @@ YOU start to dissolve
 
 &lt;span class=appear_2&gt;YO&lt;/span&gt;
 
-&lt;span class=appear_3&gt;[[Y|Alone]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="4" name="Alone" tags="" position="475,100" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;span class=appear_3&gt;[[Y|Alone]]&lt;/span&gt;
+&lt;&lt;timed 1s&gt;&gt;
+&lt;&lt;audio &quot;dissolve&quot; volume 0.2 play&gt;&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Alone" tags="" position="475,100" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
@@ -595,7 +608,6 @@ Out of everywhere.
 Just you...
 
 You and the darkness...
-
 &lt;div class=reveal&gt;
 Is it just you?
 
@@ -605,6 +617,9 @@ Should you  [[go out|Waiting]] or you are willing to keep [[going?|RabbitHole]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="AloneRoom" tags="" position="600,100" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
+&lt;&lt;timed 1s&gt;&gt;
+&lt;&lt;audio &quot;nobody&quot; volume 0.2 play&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
 &lt;div class=candle&gt;
 [img[&#39;data/Candle.gif&#39;][Alone]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Waiting" tags="" position="725,100" size="100,100">&lt;&lt;script&gt;&gt;
@@ -621,7 +636,10 @@ UIBar.destroy();
   var rellax = new Rellax(&#39;.rellax&#39;);
 &lt;/script&gt;
 
-
+&lt;&lt;audio &quot;underskin&quot; volume 0.2 play&gt;&gt;
+&lt;&lt;timed 3s&gt;&gt;
+&lt;&lt;audio &quot;godown&quot; volume 0.2 play&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
 &lt;article class=&quot;content&quot;&gt;
       &lt;div class=&quot;one rellax&quot; data-rellax-speed=&quot;5&quot;&gt;You&lt;/div&gt;
       &lt;div class=&quot;two&quot;&gt;are&lt;/div&gt;
@@ -633,6 +651,8 @@ UIBar.destroy();
 &lt;/footer&gt;</tw-passagedata><tw-passagedata pid="8" name="Tunnel" tags="tunnel" position="975,100" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
+
+&lt;&lt;audio &quot;random&quot; volume 0.2 play&gt;&gt;
 &lt;a data-passage=&quot;Forking&quot;&gt;
 &lt;svg xmlns:svg=&quot;http://www.w3.org/2000/svg&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; heihgt=&quot;100%&quot; viewBox=&quot;0 150 744 1052&quot; id=&quot;svg2&quot;  version=&quot;1&quot;&gt;
    
@@ -677,6 +697,7 @@ UIBar.destroy();
 
 &lt;&lt;set $counter to $counter + 1&gt;&gt;
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;audio &quot;laugh&quot; volume 0.2 play&gt;&gt;
 The mocking smile of a kid,
 feeling shy but everyone [[laughing|Red]],
 everybody is a [[star|Light Green]].</tw-passagedata><tw-passagedata pid="12" name="Red" tags="red" position="225,225" size="100,100">&lt;&lt;script&gt;&gt;
@@ -693,6 +714,7 @@ UIBar.destroy();
 [img[&quot;data/Gray.png&quot;]]
 &lt;&lt;set $counter to $counter + 1&gt;&gt;
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;audio &quot;help&quot; volume 0.3 play&gt;&gt;
 Do you care about them?
 Probably you think about it all the [[time|Light Green]],
 helping would be [[silently|Blue]] appreciated.</tw-passagedata><tw-passagedata pid="14" name="Blue" tags="blue" position="475,225" size="100,100">&lt;&lt;script&gt;&gt;
@@ -709,7 +731,7 @@ UIBar.destroy();
 [img[&quot;data/Black.png&quot;]]
 &lt;&lt;set $counter to $counter + 1&gt;&gt;
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
-A [[[thousand|Saffron]] whispers,
+A [[thousand|Saffron]] whispers,
 with a hundred [[mouths|Blue]],
 climbing from your spine to your [[head|Yellow]].</tw-passagedata><tw-passagedata pid="16" name="Saffron" tags="saffron" position="725,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
@@ -735,7 +757,11 @@ The ones before you,
 the ones that will come after.
 A shared path for leaving behind,
 write and become part of this maze.
+&lt;&lt;audio &quot;leave&quot; volume 0.2 play&gt;&gt;
 
+&lt;&lt;timed 2s&gt;&gt;
+&lt;&lt;audio &quot;tellus&quot; volume 0.2 play&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
 &lt;input id= &quot;oratory-input&quot; placeholder=&quot;Leave something behind&quot; size=&quot;30&quot;&gt;
 
 &lt;&lt;link [[What is that sound?|Alert]] &gt;&gt;
@@ -831,7 +857,11 @@ UIBar.destroy();
 
 &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;  Se[[e|Alert]]ms &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; like 
 &amp;emsp;&amp;emsp;&amp;emsp;you&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;[[a|Door]]re
-&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;[[t|Rest]]angled &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;up</tw-passagedata><tw-passagedata pid="21" name="Door" tags="doors" position="100,350" size="100,100">&lt;&lt;script&gt;&gt;
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;[[t|Rest]]angled &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;up
+ 
+ &lt;&lt;timed 1s&gt;&gt;
+&lt;&lt;audio &quot;losto&quot; volume 0.2 play&gt;&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Door" tags="doors" position="100,350" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
@@ -885,7 +915,7 @@ UIBar.destroy();
           //console.log(&quot;response&quot;);
           messageArray = response;
           console.log(messageArray);
-          for(let i = 0 ; i&lt;messageArray.length; i++){
+          for(let i = messageArray.length -1 ; i&gt;0; i--){
             var para = document.createElement(&quot;li&quot;);
             var node = document.createTextNode(messageArray[i].message);
             para.appendChild(node);
