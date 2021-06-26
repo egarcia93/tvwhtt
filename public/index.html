@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html data-init="no-js">
 <head>
-  <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-
 <meta charset="UTF-8" />
 <title>The voice we hear through time</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -248,11 +246,20 @@ position: absolute;
 
 }
 
+.alert a {
+  color:red;
+}
+
 .tangled{
   
   font-size: 35px;
   margin-left: auto;
 }
+
+.tangled a {
+  color:red;
+}
+
 
 .doors{
 
@@ -263,12 +270,22 @@ position: absolute;
 
 }
 
+.doors a {
+  color:red;
+}
+
+
 .door1{
 
   font-size : 60px;
   letter-spacing: 5px;
 
 }
+
+.door1 a {
+  color:red;
+}
+
 
 .door2{
 
@@ -277,10 +294,20 @@ position: absolute;
 
 }
 
+.door2 a {
+  color:red;
+}
+
+
 .door3{
   font-size: 100px;
   letter-spacing: -25px;
 }
+
+.door3 a {
+  color:red;
+}
+
 
 #svg2 {
     width: 100%;
@@ -543,7 +570,7 @@ li:nth-last-child(10) {
   margin-bottom: 0px;
 }
 
-a.string{
+.stringy a{
 
   color: red;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;song&quot; &quot;data/track.wav&quot; &gt;&gt;
@@ -676,14 +703,14 @@ UIBar.destroy();
     &lt;/textPath&gt;
     &lt;/text&gt;
    &lt;/svg&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="9" name="Forking" tags="" position="1100,100" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;/a&gt;</tw-passagedata><tw-passagedata pid="9" name="Forking" tags="stringy" position="1100,100" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
 [[E|Light Green]] [[n|Grey]] [[t|White]] [[e|Red]] [[r|Blue]] [[i|Saffron]] [[n|Yellow]] [[g|Black]] blindfolded to a garden of forked paths ,
 Every wall is different, 
 there is no distiction at all.
-&lt;&lt;set $counter to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Light Green" tags="green" position="1225,100" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;&lt;set $counter to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Light Green" tags="stringy" position="1225,100" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 [img[&quot;data/Green.png&quot;]]
@@ -692,7 +719,7 @@ UIBar.destroy();
 
 Flowers and grass around [[everything|Grey]], 
 that smile hidden behind the [[sunlight|Red]],
-the [[eyes|White]] of a butterfly.</tw-passagedata><tw-passagedata pid="11" name="White" tags="white" position="100,225" size="100,100">[img[&quot;data/White.png&quot;]]
+the [[eyes|White]] of a butterfly.</tw-passagedata><tw-passagedata pid="11" name="White" tags="stringy" position="100,225" size="100,100">[img[&quot;data/White.png&quot;]]
 &lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
@@ -702,7 +729,7 @@ UIBar.destroy();
 &lt;&lt;audio &quot;laugh&quot; volume 0.1 play&gt;&gt;
 The mocking smile of a kid,
 feeling shy but everyone [[laughing|Red]],
-everybody is a [[star|Light Green]].</tw-passagedata><tw-passagedata pid="12" name="Red" tags="red" position="225,225" size="100,100">&lt;&lt;script&gt;&gt;
+everybody is a [[star|Light Green]].</tw-passagedata><tw-passagedata pid="12" name="Red" tags="stringy" position="225,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 [img[&quot;data/Red.png&quot;]]
@@ -710,7 +737,7 @@ UIBar.destroy();
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 And suddenly you are [[yelling|Light Green]],
 fire comes out of you [[throat|Yellow]],
-your [[guts|Blue]] and your head are boiling.</tw-passagedata><tw-passagedata pid="13" name="Grey" tags="grey" position="350,225" size="100,100">&lt;&lt;script&gt;&gt;
+your [[guts|Blue]] and your head are boiling.</tw-passagedata><tw-passagedata pid="13" name="Grey" tags="stringy" position="350,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 [img[&quot;data/Gray.png&quot;]]
@@ -719,7 +746,7 @@ UIBar.destroy();
 &lt;&lt;audio &quot;help&quot; volume 0.3 play&gt;&gt;
 Do you care about them?
 Probably you think about it all the [[time|Light Green]],
-helping would be [[silently|Blue]] appreciated.</tw-passagedata><tw-passagedata pid="14" name="Blue" tags="blue" position="475,225" size="100,100">&lt;&lt;script&gt;&gt;
+helping would be [[silently|Blue]] appreciated.</tw-passagedata><tw-passagedata pid="14" name="Blue" tags="stringy" position="475,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 [img[&quot;data/Blue.png&quot;]]
@@ -727,7 +754,7 @@ UIBar.destroy();
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 Just [[look|Light Green]] [[away|Grey]],
 that [[smell|Grey]] is [[unbearable|Saffron]],
-the [[feeling|Black]] of being [[apart|Yellow]].</tw-passagedata><tw-passagedata pid="15" name="Black" tags="black" position="600,225" size="100,100">&lt;&lt;script&gt;&gt;
+the [[feeling|Black]] of being [[apart|Yellow]].</tw-passagedata><tw-passagedata pid="15" name="Black" tags="stringy" position="600,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 [img[&quot;data/Black.png&quot;]]
@@ -736,7 +763,7 @@ UIBar.destroy();
 A [[thousand|Saffron]] whispers,
 with a hundred [[mouths|Blue]],
 climbing from your spine to your [[head|Yellow]].
-&lt;&lt;audio &quot;bug&quot; volume 0.7 play&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Saffron" tags="saffron" position="725,225" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;&lt;audio &quot;bug&quot; volume 0.7 play&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Saffron" tags="stringy" position="725,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 [img[&quot;data/Saffron.png&quot;]]
@@ -744,7 +771,7 @@ UIBar.destroy();
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 Stand against the [[unpredictable|Black]] faith,
 battle the [[uncertain|Grey]],
-do your [[will|Blue]].</tw-passagedata><tw-passagedata pid="17" name="Yellow" tags="yellow" position="850,225" size="100,100">&lt;&lt;script&gt;&gt;
+do your [[will|Blue]].</tw-passagedata><tw-passagedata pid="17" name="Yellow" tags="stringy" position="850,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 [img[&quot;data/Yellow.png&quot;]]
@@ -752,7 +779,7 @@ UIBar.destroy();
 &lt;&lt;if $counter is 4&gt;&gt;&lt;&lt;goto &quot;Oratory&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 Is this feeling something [[new|Red]]?
 An emotion you may [[lost|Blue]],
-Unveiling [[curtains|Black]] under the rain.</tw-passagedata><tw-passagedata pid="18" name="Oratory" tags="" position="975,225" size="100,100">&lt;&lt;script&gt;&gt;
+Unveiling [[curtains|Black]] under the rain.</tw-passagedata><tw-passagedata pid="18" name="Oratory" tags="stringy" position="975,225" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
@@ -762,13 +789,13 @@ A shared path for leaving behind,
 write and become part of this maze.
 &lt;&lt;audio &quot;leave&quot; volume 0.3 play&gt;&gt;
 
+
+&lt;input id= &quot;oratory-input&quot; placeholder=&quot;Leave something behind&quot; autocomplete=&quot;off&quot; size=&quot;23&quot;&gt;
+
+&lt;&lt;link [[What is that sound?|Alert]] &gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;
 &lt;&lt;audio &quot;tellus&quot; volume 0.2 play&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
-&lt;input id= &quot;oratory-input&quot; placeholder=&quot;Leave something behind&quot; size=&quot;30&quot;&gt;
-
-&lt;&lt;link [[What is that sound?|Alert]] &gt;&gt;
-
 &lt;&lt;script&gt;&gt;
       
        let message =  document.getElementById(&#39;oratory-input&#39;).value;
@@ -882,7 +909,7 @@ There is [[no...-&gt;Door3]]</tw-passagedata><tw-passagedata pid="24" name="Door
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
-[[EXIT-&gt;Alert]]</tw-passagedata><tw-passagedata pid="25" name="Rest" tags="" position="600,350" size="100,100">&lt;&lt;script&gt;&gt;
+[[EXIT-&gt;Alert]]</tw-passagedata><tw-passagedata pid="25" name="Rest" tags="stringy" position="600,350" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
@@ -896,7 +923,7 @@ Wait until  the door opens.
 
 &lt;span class=&quot;breath&quot;&gt;Just breathe&lt;/span&gt;
 
-&lt;span class=&quot;appear_4&quot;&gt;[[Lets go|String]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="26" name="String" tags="string" position="725,350" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;span class=&quot;appear_4&quot;&gt;[[Lets go|String]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="26" name="String" tags="stringy" position="725,350" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 
 &lt;&lt;/script&gt;&gt;
@@ -929,13 +956,13 @@ UIBar.destroy();
           }
         });
 &lt;&lt;/script&gt;&gt;
-Did you found your trace?
+Have you found your trace?
 Now you are [[out|Credits]] of the maze</tw-passagedata><tw-passagedata pid="28" name="Credits" tags="" position="975,350" size="100,100">&lt;&lt;script&gt;&gt;
 UIBar.destroy();
 &lt;&lt;/script&gt;&gt;
 
 
-Design, Development, Music &amp; Sound Design by &lt;a href=&quot;http://www.egarciaa.com&quot;&gt;Enrique García-Alcalá&lt;/a&gt;
+By &lt;a href=&quot;http://www.egarciaa.com&quot;&gt;Enrique García-Alcalá&lt;/a&gt;
 
 Voices by Kelsie Smith &amp; Michael Morran
 

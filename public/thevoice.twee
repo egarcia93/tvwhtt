@@ -166,7 +166,7 @@ UIBar.destroy();
     </text>
    </svg>
 </a>
-:: Forking
+:: Forking [stringy]
 <<script>>
 UIBar.destroy();
 <</script>>
@@ -176,7 +176,7 @@ Every wall is different,
 there is no distiction at all.
 <<set $counter to 0>>
 
-:: Light Green [green]
+:: Light Green [stringy]
 
 <<script>>
 UIBar.destroy();
@@ -190,7 +190,7 @@ that smile hidden behind the [[sunlight|Red]],
 the [[eyes|White]] of a butterfly.
 
 
-:: White [white]
+:: White [stringy]
 [img["data/White.png"]]
 <<script>>
 UIBar.destroy();
@@ -203,7 +203,7 @@ The mocking smile of a kid,
 feeling shy but everyone [[laughing|Red]],
 everybody is a [[star|Light Green]].
 
-:: Red [red]
+:: Red [stringy]
 
 <<script>>
 UIBar.destroy();
@@ -216,7 +216,7 @@ fire comes out of you [[throat|Yellow]],
 your [[guts|Blue]] and your head are boiling.
 
 
-:: Grey [grey]
+:: Grey [stringy]
 
 <<script>>
 UIBar.destroy();
@@ -229,7 +229,7 @@ Do you care about them?
 Probably you think about it all the [[time|Light Green]],
 helping would be [[silently|Blue]] appreciated.
 
-:: Blue [blue]
+:: Blue [stringy]
 
 <<script>>
 UIBar.destroy();
@@ -242,7 +242,7 @@ that [[smell|Grey]] is [[unbearable|Saffron]],
 the [[feeling|Black]] of being [[apart|Yellow]].
 
 
-:: Black [black]
+:: Black [stringy]
 
 <<script>>
 UIBar.destroy();
@@ -256,7 +256,7 @@ climbing from your spine to your [[head|Yellow]].
 <<audio "bug" volume 0.7 play>>
 
 
-:: Saffron [saffron]
+:: Saffron [stringy]
 
 <<script>>
 UIBar.destroy();
@@ -269,7 +269,7 @@ battle the [[uncertain|Grey]],
 do your [[will|Blue]].
 
 
-:: Yellow [yellow]
+:: Yellow [stringy]
 
 <<script>>
 UIBar.destroy();
@@ -282,7 +282,7 @@ An emotion you may [[lost|Blue]],
 Unveiling [[curtains|Black]] under the rain.
 
 
-:: Oratory
+:: Oratory [stringy]
 
 <<script>>
 UIBar.destroy();
@@ -294,13 +294,13 @@ A shared path for leaving behind,
 write and become part of this maze.
 <<audio "leave" volume 0.3 play>>
 
+
+<input id= "oratory-input" placeholder="Leave something behind" autocomplete="off" size="23">
+
+<<link [[What is that sound?|Alert]] >>
 <<timed 2s>>
 <<audio "tellus" volume 0.2 play>>
 <</timed>>
-<input id= "oratory-input" placeholder="Leave something behind" size="30">
-
-<<link [[What is that sound?|Alert]] >>
-
 <<script>>
       
        let message =  document.getElementById('oratory-input').value;
@@ -435,7 +435,7 @@ UIBar.destroy();
 
 [[EXIT->Alert]]
 
-:: Rest
+:: Rest [stringy]
 <<script>>
 UIBar.destroy();
 <</script>>
@@ -452,7 +452,7 @@ Wait until  the door opens.
 
 <span class="appear_4">[[Lets go|String]]</span>
 
-:: String [string]
+:: String [stringy]
 
 
 <<script>>
@@ -491,7 +491,7 @@ UIBar.destroy();
           }
         });
 <</script>>
-Did you found your trace?
+Have you found your trace?
 Now you are [[out|Credits]] of the maze
 
 :: Credits
@@ -500,7 +500,7 @@ UIBar.destroy();
 <</script>>
 
 
-Design, Development, Music & Sound Design by <a href="http://www.egarciaa.com">Enrique García-Alcalá</a>
+By <a href="http://www.egarciaa.com">Enrique García-Alcalá</a>
 
 Voices by Kelsie Smith & Michael Morran
 
@@ -665,11 +665,20 @@ position: absolute;
 
 }
 
+.alert a {
+  color:red;
+}
+
 .tangled{
   
   font-size: 35px;
   margin-left: auto;
 }
+
+.tangled a {
+  color:red;
+}
+
 
 .doors{
 
@@ -680,12 +689,22 @@ position: absolute;
 
 }
 
+.doors a {
+  color:red;
+}
+
+
 .door1{
 
   font-size : 60px;
   letter-spacing: 5px;
 
 }
+
+.door1 a {
+  color:red;
+}
+
 
 .door2{
 
@@ -694,10 +713,20 @@ position: absolute;
 
 }
 
+.door2 a {
+  color:red;
+}
+
+
 .door3{
   font-size: 100px;
   letter-spacing: -25px;
 }
+
+.door3 a {
+  color:red;
+}
+
 
 #svg2 {
     width: 100%;
@@ -960,7 +989,7 @@ li:nth-last-child(10) {
   margin-bottom: 0px;
 }
 
-a.string{
+.stringy a{
 
   color: red;
 }
