@@ -41,7 +41,7 @@ window.onclick = function(event){
 
 :: Start [start]
 
-<<audio "song" volume 0.7 play>>
+<<audio "song" volume 0.7 loop play>>
 <<script>>
 UIBar.destroy();
 <</script>>
