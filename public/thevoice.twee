@@ -482,7 +482,7 @@ UIBar.destroy();
           //console.log("response");
           messageArray = response;
           console.log(messageArray.length);
-          for(let i = messageArray.length -1; i>15; i--){
+          for(let i = messageArray.length -1; i>messageArray.length-16; i--){
             var para = document.createElement("li");
             var node = document.createTextNode(messageArray[i].message);
             para.appendChild(node);
